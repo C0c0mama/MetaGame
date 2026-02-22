@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MetaGames</title>
     <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesom-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Top Banner-->
     <header class="top-banner">
         <div class="banner-stripes-wrap">
             <div class="stripe-group left">
-                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
             <div class="stripe-group right">
-                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
         </div>
         <h1 class="banner-title">MetaGames</h1>
     </header>
 
     <!--Navbar-->
-    <nav class="navbar" id="navar">
+    <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <div class="logo-circle"></div>
-                <span class="logo-label">Meta<br>Games</span>
+                <img src="assets/eswf-metagames-logo.png" alt="logo" class="logo-img">
             </a>
 
             <ul class="nav-links" id="navLinks">
+                <li class="close-item">
+                    <button class="hamburger" id="hamburger" aria-label="Close menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">What Are MetaGames</a></li>
                 <li><a href="#">News &amp; Updates</a></li>
@@ -37,7 +44,14 @@
                 <li><a href="#">Emblem &amp; Meaning</a></li>
                 <li><a href="#">Official Theme Song</a></li>
                 <li><a href="#">Host Nations</a></li>
+                <li class="join-item"><a href="#" class="btn-join-mobile">Join MetaGames</a></li>
             </ul>
+
+            <a href="#" class="btn-join">Join MetaGames</a>
+
+            <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
