@@ -16,3 +16,15 @@
   --color-rose: #f33847;
   --color-red: #ff0000;
 }
+
+.stripes {
+  @apply flex items-center flex-1;
+}
+
+.stripe {
+  @apply h-3 flex-1 sm:h-5;
+}
+
+.nav-link {
+  @apply block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue;
+}
