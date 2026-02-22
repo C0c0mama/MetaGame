@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* ─── Fonts ─────────────────────────────────────────── */
+  --font-sans: 'Calibri', ui-sans-serif, system-ui, sans-serif;
+  --font-narrow: 'Oswald', 'Arial Narrow', ui-sans-serif, sans-serif;
+
+  /* ─── Colors ─────────────────────────────────────────── */
+  --color-primary: #141b25;
+  --color-charcoal: #434850;
+  --color-sky: #eef7fe;
+  --color-green: #31aa68;
+  --color-blue: #217ec7;
+  --color-yellow: #f6d52d;
+  --color-rose: #f33847;
+  --color-red: #ff0000;
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESWF</title>
+    <link rel="stylesheet" href="src/assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Top Banner -->
+    <div class="banner bg-primary flex justify-between items-center flex-wrap">
+      <div class="stripes flex items-center flex-1">
+        <div class="stripe h-3 flex-1 bg-green sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-blue sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-yellow sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-rose sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-white sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-black sm:h-5"></div>
+      </div>
+      <h2
+        class="font-narrow font-700 tracking-widest text-white text-4xl px-4 py-2 sm:text-5xl sm:px-8 sm:py-4 sm:tracking-[1rem]"
+      >
+        METAGAMES
+      </h2>
+      <div class="stripes flex items-center flex-1">
+        <div class="stripe h-3 flex-1 bg-green sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-blue sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-yellow sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-rose sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-white sm:h-5"></div>
+        <div class="stripe h-3 flex-1 bg-black sm:h-5"></div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+      class="nav from-blue-900 to-blue bg-linear-to-r p-2 lg:px-12 2xl:px-24 text-sky flex justify-between items-center gap-x-4 relative"
+    >
+      <!-- Logo -->
+      <img
+        src="src/assets/images/eswf-metagames-logo.png"
+        alt="ESWF MetaGames Logo"
+        class="nav-logo w-18 h-18 shrink-0"
+      />
+
+      <!-- Nav Links: dropdown on mobile, horizontal row on lg+ -->
+      <div
+        id="nav-links"
+        class="hidden absolute top-full left-0 right-0 z-50 flex-col gap-2 p-2 from-blue-900 to-blue bg-linear-to-r lg:static lg:flex lg:flex-row lg:flex-wrap lg:items-center lg:gap-x-4 lg:gap-y-2 lg:p-0 lg:bg-none lg:bg-transparent"
+      >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue active"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue"
+          >What Are MetaGames</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue"
+          >News &amp; Updates</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue"
+          >Sports &amp; Games</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue"
+          >Meta Movement</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue"
+          >Emblem &amp; Meaning</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue"
+          >Official Theme Song</a
+        >
+        <a
+          href="#"
+          class="nav-link block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue lg:mr-4"
+          >Host Nation</a
+        >
+        <a
+          href="#"
+          class="nav-link cta-btn bg-rose text-2xl font-light py-2 px-4 rounded-lg lg:ml-auto hover:bg-red"
+          >Join MetaGames</a
+        >
+      </div>
+
+      <!-- Hamburger Button (mobile only) -->
+      <button
+        id="hamburger-btn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        class="flex flex-col justify-between w-7 h-5 bg-transparent border-none cursor-pointer p-0 ml-auto lg:hidden"
+      >
+        <span class="block h-0.5 w-full bg-sky rounded"></span>
+        <span class="block h-0.5 w-full bg-sky rounded"></span>
+        <span class="block h-0.5 w-full bg-sky rounded"></span>
+      </button>
+    </nav>
+
+    <script>
+      const btn = document.getElementById('hamburger-btn');
+      const navLinks = document.getElementById('nav-links');
+      let isOpen = false;
+
+      btn.addEventListener('click', () => {
+        isOpen = !isOpen;
+        navLinks.classList.toggle('hidden', !isOpen);
+        navLinks.classList.toggle('flex', isOpen);
+      });
+    </script>
+  </body>
+</html>
