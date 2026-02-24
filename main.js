@@ -66,3 +66,85 @@ document.addEventListener('click', (e) => {
         closeMenu();
     }
 });
+
+/* ── Scroll reveal for WAM section ── */
+const revealEls = document.querySelectorAll('.wam-inner, .pillars');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+revealEls.forEach(el => observer.observe(el));
+
+/* ── Scroll reveal for News & Updates section ── */
+const newsEls = document.querySelectorAll('.news-header, .news-containter img');
+
+const newsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            newsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+newsEls.forEach(el => newsObserver.observe(el));
+
+/* ── Sports & Games Carousel ── */
+(function () {
+    const track   = document.querySelector('.sports-carousel__track');
+    const slides  = document.querySelectorAll('.sports-slide');
+    const dots    = document.querySelectorAll('.sports-dot');
+    const btnPrev = document.querySelector('.sports-carousel__btn--prev');
+    const btnNext = document.querySelector('.sports-carousel__btn--next');
+
+    if (!track || !slides.length) return;
+
+    let current = 0;
+    let autoTimer;
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current]?.classList.remove('active');
+        dots[current]?.setAttribute('aria-selected', 'false');
+
+        current = (index + slides.length) % slides.length;
+
+        slides[current].classList.add('active');
+        dots[current]?.classList.add('active');
+        dots[current]?.setAttribute('aria-selected', 'true');
+
+        track.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    function startAuto() {
+        autoTimer = setInterval(() => goTo(current + 1), 5000);
+    }
+
+    function resetAuto() {
+        clearInterval(autoTimer);
+        startAuto();
+    }
+
+    btnNext?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+    btnPrev?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+    });
+
+    // Swipe support
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); resetAuto(); }
+    });
+
+    startAuto();
+})();
