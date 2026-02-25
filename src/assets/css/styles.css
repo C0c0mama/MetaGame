@@ -54,11 +54,19 @@
 }
 
 .slider-prev-btn {
-  @apply absolute left-5 top-1/2 -translate-y-1/2 z-20 bg-sky hover:bg-blue text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full lg:left-6 xl:left-8 xl:size-15 2xl:size-18;
+  @apply cursor-pointer absolute left-5 top-1/2 -translate-y-1/2 z-20 bg-sky hover:bg-blue-500 text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full lg:left-6 xl:left-8 xl:size-15 2xl:size-18;
 }
 
 .slider-next-btn {
-  @apply absolute right-5 top-1/2 -translate-y-1/2 z-20 bg-sky hover:bg-blue text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full lg:right-6 xl:right-8 xl:size-15 2xl:size-18;
+  @apply cursor-pointer absolute right-5 top-1/2 -translate-y-1/2 z-20 bg-sky hover:bg-blue-500 text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full lg:right-6 xl:right-8 xl:size-15 2xl:size-18;
+}
+
+.slider-dot {
+  @apply w-3 h-3 rounded-full bg-sky/40 cursor-pointer transition-all duration-300;
+}
+
+.slider-dot.active {
+  @apply bg-sky scale-125;
 }
 
 .sports-slider-card {
@@ -86,7 +94,7 @@
 }
 
 .sports-slider-card button {
-  @apply mt-5 cursor-pointer bg-white hover:bg-blue text-blue hover:text-white px-3 py-1 text-lg rounded-lg sm:rounded-xl sm:mt-8 sm:w-50 md:text-xl md:py-2 lg:mt-12 xl:mt-16 xl:px-5 xl:py-3 xl:text-2xl xl:w-70 2xl:mt-36 2xl:text-3xl 2xl:w-90;
+  @apply mt-5 cursor-pointer bg-white hover:bg-blue-500 text-blue hover:text-white px-3 py-1 text-lg rounded-lg sm:rounded-xl sm:mt-8 sm:w-50 md:text-xl md:py-2 lg:mt-12 xl:mt-16 xl:px-5 xl:py-3 xl:text-2xl xl:w-70 2xl:mt-36 2xl:text-3xl 2xl:w-90;
 }
 
 @layer utilities {
