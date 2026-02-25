@@ -95,7 +95,7 @@ const segments = [
   { color: 'Yellow', text: 'Traditional Sports' },
   { color: 'Red', text: 'Active/Digital/Virtual Sports' },
   { color: 'White', text: 'The ESWF Member Nations' },
-  { color: 'Black', text: 'The MeTa Movement' },
+  { color: 'Black', text: 'The Meta Movement' },
   { color: 'Grey', text: 'Professional & Amateur Sports' },
 ];
 
