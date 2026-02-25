@@ -14,7 +14,6 @@ btn.addEventListener('click', () => {
 });
 
 // Sports & Games Slider
-// Sports & Games Slider
 const slider = document.getElementById('sports-slider');
 const leftBtn = document.getElementById('slider-left');
 const rightBtn = document.getElementById('slider-right');
@@ -81,3 +80,86 @@ slider.addEventListener('scroll', () => {
     dot.classList.toggle('active', i === currentIndex);
   });
 });
+
+// Roulette Spinner
+const wheelMobile = document.getElementById('wheel');
+const wheelDesktop = document.getElementById('wheel-desktop');
+const titleMobile = document.getElementById('title-mobile');
+const subtitleMobile = document.getElementById('subtitle-mobile');
+const titleDesktop = document.getElementById('title-desktop');
+const subtitleDesktop = document.getElementById('subtitle-desktop');
+
+const segments = [
+  { color: 'Green', text: 'Multi-Cultural Sports' },
+  { color: 'Blue', text: 'Electronic Sports' },
+  { color: 'Yellow', text: 'Traditional Sports' },
+  { color: 'Red', text: 'Active/Digital/Virtual Sports' },
+  { color: 'White', text: 'The ESWF Member Nations' },
+  { color: 'Black', text: 'The MeTa Movement' },
+  { color: 'Grey', text: 'Professional & Amateur Sports' },
+];
+
+const segmentAngle = 360 / segments.length;
+let currIndex = 0;
+let totalRotationMobile = 0;
+let totalRotationDesktop = 0;
+
+function getPointerAngle(isMobile) {
+  return isMobile ? 180 : 90;
+}
+
+function updateContent() {
+  titleMobile.textContent = segments[currIndex].color;
+  subtitleMobile.textContent = segments[currIndex].text;
+  titleDesktop.textContent = segments[currIndex].color;
+  subtitleDesktop.textContent = segments[currIndex].text;
+}
+
+function initWheels() {
+  const segmentCenter = currIndex * segmentAngle + segmentAngle / 2;
+
+  totalRotationMobile = 180 - segmentCenter;
+  wheelMobile.style.transition = 'none';
+  wheelMobile.style.transform = `rotate(${totalRotationMobile}deg)`;
+
+  totalRotationDesktop = 90 - segmentCenter;
+  wheelDesktop.style.transition = 'none';
+  wheelDesktop.style.transform = `rotate(${totalRotationDesktop}deg)`;
+
+  updateContent();
+}
+
+function prev() {
+  currIndex = (currIndex - 1 + segments.length) % segments.length;
+  totalRotationMobile += segmentAngle;
+  totalRotationDesktop += segmentAngle;
+  wheelMobile.style.transition = 'transform 0.6s ease';
+  wheelMobile.style.transform = `rotate(${totalRotationMobile}deg)`;
+  wheelDesktop.style.transition = 'transform 0.6s ease';
+  wheelDesktop.style.transform = `rotate(${totalRotationDesktop}deg)`;
+  updateContent();
+}
+
+function next() {
+  currIndex = (currIndex + 1) % segments.length;
+  totalRotationMobile -= segmentAngle;
+  totalRotationDesktop -= segmentAngle;
+  wheelMobile.style.transition = 'transform 0.6s ease';
+  wheelMobile.style.transform = `rotate(${totalRotationMobile}deg)`;
+  wheelDesktop.style.transition = 'transform 0.6s ease';
+  wheelDesktop.style.transform = `rotate(${totalRotationDesktop}deg)`;
+  updateContent();
+}
+
+document.getElementById('prevBtn-mobile').addEventListener('click', prev);
+document.getElementById('nextBtn-mobile').addEventListener('click', next);
+document.getElementById('prevBtn-desktop').addEventListener('click', prev);
+document.getElementById('nextBtn-desktop').addEventListener('click', next);
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(initWheels, 150);
+});
+
+initWheels();
