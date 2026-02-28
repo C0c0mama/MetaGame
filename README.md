@@ -1,4 +1,4 @@
-# OJT Task: Develop Esports World Federation MetaGame Website
+# OJT Task: Develop Esports World Federation MetaGames Website
 
 ## Instructions
 
