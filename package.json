@@ -1,0 +1,26 @@
+{
+  "name": "eswf-metagames",
+  "version": "1.0.0",
+  "description": "Esports World Federation MetaGames Website",
+  "homepage": "https://github.com/C0c0mama/MetaGame#readme",
+  "bugs": {
+    "url": "https://github.com/C0c0mama/MetaGame/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C0c0mama/MetaGame.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "gh-pages -d dist -r https://github.com/C0c0mama/MetaGame.git"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^7.3.1"
+  }
+}
