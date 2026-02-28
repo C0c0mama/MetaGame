@@ -6,5 +6,6 @@ Each group must use a single repository, collaborate via Git, and ensure that ev
 
 ### This repository has three branches:
 
+- `main` repository (Jmark's version)
 - `Jmark` (merged in main branch) [View Live](https://c0c0mama.github.io/MetaGame/)
 - `jonas` (Tailwind version) [View Live](https://jdbacuno.github.io/eswf-metagames/)
