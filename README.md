@@ -4,11 +4,6 @@
 
 Each group must use a single repository, collaborate via Git, and ensure that every commit represents one specific change.
 
-## Mockup
-
-[Mockup 1](assets/images/metagames-mockup-1.webp)
-[Mockup 2](assets/images/metagames-mockup-1.webp)
-
 ### This repository has three branches:
 
 - `main` [View Live Version](https://c0c0mama.github.io/MetaGame/)
@@ -20,3 +15,8 @@ Each group must use a single repository, collaborate via Git, and ensure that ev
 If you'd like to view the Tailwind version, kindly visit this repository:
 
 - `jonas` (Tailwind version) [View Repository](https://github.com/jdbacuno/eswf-metagames) | [View Live Version](https://jdbacuno.github.io/eswf-metagames/)
+
+## Mockup Images
+
+![Mockup 1](assets/images/metagames-mockup-1.webp)
+![Mockup 2](assets/images/metagames-mockup-1.webp)
