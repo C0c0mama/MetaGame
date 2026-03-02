@@ -65,11 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.color = '#ffffff';
     }
 
+    // Contrast check for card prev/next buttons
     if (activeData.color === 'White') {
       prevBtn.style.borderColor = '#000';
       prevBtn.style.color = '#000';
       nextBtn.style.borderColor = '#000';
       nextBtn.style.color = '#000';
+    } else if (activeData.color === 'black') {
+      prevBtn.style.borderColor = '#fff';
+      prevBtn.style.color = '#fff';
+      nextBtn.style.borderColor = '#fff';
+      nextBtn.style.color = '#fff';
     }
   }
 
