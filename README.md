@@ -4,6 +4,11 @@
 
 Each group must use a single repository, collaborate via Git, and ensure that every commit represents one specific change.
 
+## Mockup
+
+[Mockup 1](assets/images/metagames-mockup-1.webp)
+[Mockup 2](assets/images/metagames-mockup-1.webp)
+
 ### This repository has three branches:
 
 - `main` [View Live Version](https://c0c0mama.github.io/MetaGame/)
