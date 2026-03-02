@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevBtn.style.color = '#000';
       nextBtn.style.borderColor = '#000';
       nextBtn.style.color = '#000';
-    } else if (activeData.color === 'black') {
+    } else if (activeData.color === 'Black') {
       prevBtn.style.borderColor = '#fff';
       prevBtn.style.color = '#fff';
       nextBtn.style.borderColor = '#fff';
