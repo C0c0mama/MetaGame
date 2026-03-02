@@ -18,10 +18,10 @@ If you'd like to view the Tailwind version, kindly visit this repository:
 
 ## Mockup Images
 
-#### Mockup 1
+### Mockup 1
 
 ![Mockup 1](assets/images/metagames-mockup-1.webp)
 
-#### Mockup 2
+### Mockup 2
 
 ![Mockup 2](assets/images/metagames-mockup-2.webp)
