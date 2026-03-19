@@ -14,7 +14,7 @@ Each group must use a single repository, collaborate via Git, and ensure that ev
 
 If you'd like to view the Tailwind version, kindly visit this repository:
 
-- `jonas` (Tailwind version) [View Repository](https://github.com/jdbacuno/eswf-metagames) | [View Live Version](https://jdbacuno.github.io/eswf-metagames/)
+- `jonas` (Tailwind version) [View Live Version](https://jdbacuno.github.io/eswf-metagames/)
 
 ## Mockup Images
 
